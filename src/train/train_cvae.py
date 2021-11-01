@@ -7,6 +7,7 @@ from src.train.trainer import train
 from src.utils.tensors import collate
 import src.utils.fixseed  # noqa
 
+
 from src.parser.training import parser
 from src.utils.get_model_and_data import get_model_and_data
 
