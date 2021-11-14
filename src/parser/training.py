@@ -9,10 +9,10 @@ from .checkpoint import construct_checkpointname
 
 def add_training_options(parser):
     group = parser.add_argument_group('Training options')
-    group.add_argument("--batch_size", type=int, required=True, help="size of the batches")
-    group.add_argument("--num_epochs", type=int, required=True, help="number of epochs of training")
-    group.add_argument("--lr", type=float, required=True, help="AdamW: learning rate")
-    group.add_argument("--snapshot", type=int, required=True, help="frequency of saving model/viz")
+    group.add_argument("--batch_size", type=int, default=20, help="size of the batches")
+    group.add_argument("--num_epochs", type=int, default=5000, help="number of epochs of training")
+    group.add_argument("--lr", type=float, default=0.0001, help="AdamW: learning rate")
+    group.add_argument("--snapshot", type=int, default=100, help="frequency of saving model/viz")
     
 
 def parser():
